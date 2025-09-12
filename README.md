@@ -47,7 +47,7 @@ cd n8n-workflows
 - 📥 Retrieves customer records from the training datastore.  
 - ✍ Maps fields like ID, Name, Email, and Notes.  
 - 📤 Sends formatted messages to customers.  
-- 📄 [View Details](./Data_Retrival/README.md)
+- 📄 [View Details] (./Data_Reterival/README.md)
 ----
 
 
