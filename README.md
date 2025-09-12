@@ -19,8 +19,19 @@ Each workflow lives in its own folder with a dedicated README and JSON file for 
 
 ### 1️⃣ Clone or Download
 ```bash
- ### 1️⃣ Clone or Download
+ ```markdown
+### 1️⃣ Clone or Download
 ```bash
 git clone https://github.com/mibrahim-O2/n8n-workflows.git
 cd n8n-workflows
+```
+----
+### 🤖 [ChatBot – Google Gemini Chatbot](./ChatBot01)
+**Project Name:** AI Chatbot with Memory  
+- 🔗 Google Gemini (PaLM)–powered conversational bot.  
+- 🧠 Retains recent chat context using Simple Memory Buffer.  
+- 🤖 AI Agent processes and responds intelligently.  
+- 📄 [View Details](./ChatBot/README.md)
+
+
 
