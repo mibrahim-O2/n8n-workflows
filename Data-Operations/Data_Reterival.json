@@ -1,0 +1,130 @@
+{
+  "name": "Data_Reterival",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -288,
+        -32
+      ],
+      "id": "aea757b9-c665-4548-a3ff-f932ca11886c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "getAllPeople"
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -32
+      ],
+      "id": "3315a3f9-4972-4319-9496-c0579655b0b0",
+      "name": "Customer Datastore (n8n training)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a72ed83f-a45d-4d4b-8cdb-7636eed86c43",
+              "name": "Customer_ID",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "75cbe73d-4106-45b5-b09c-eb37f76bcfa0",
+              "name": "Customer_Name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "3e167ce3-f4b9-4df1-a1d9-52e4c485c1b7",
+              "name": "Email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "dd8f7caf-800d-4f08-9052-55b52e37496f",
+              "name": "Message",
+              "value": "={{ $json.notes }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        128,
+        -32
+      ],
+      "id": "06f4f025-b5ab-4b3e-9d62-25c107d81331",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "customerId": "={{ $json.Customer_ID }}",
+        "message": "={{ $json.Customer_Name }}{{ $json.Message }}"
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerMessenger",
+      "typeVersion": 1,
+      "position": [
+        336,
+        -32
+      ],
+      "id": "3149aafc-fde2-4253-9865-022569d3802a",
+      "name": "Customer Messenger (n8n training)"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Customer Messenger (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "47ab7ff9-2be6-42a7-98ce-cd46978e9840",
+  "meta": {
+    "instanceId": "29135df830909e313b7a71851cfaf3241c282055b3bcb889d9a0abffe028b15c"
+  },
+  "id": "hTi9KMheDbfDOyOj",
+  "tags": []
+}
