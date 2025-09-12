@@ -1,0 +1,299 @@
+{
+  "name": "Real_World_Case",
+  "nodes": [
+    {
+      "parameters": {
+        "url": " https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "c97b6697bf48163c903922f4fe037686"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        0
+      ],
+      "id": "5ccb3dda-b7e5-4016-a375-7b81b2bb2e64",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "uQ7cwPpi0Llop2Pi",
+          "name": "Header Auth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appMbtFEtb4tlvEbs",
+          "mode": "list",
+          "cachedResultName": "Beginners course",
+          "cachedResultUrl": "https://airtable.com/appMbtFEtb4tlvEbs"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblm8AWajXw7PrlGK",
+          "mode": "list",
+          "cachedResultName": "processingOrders",
+          "cachedResultUrl": "https://airtable.com/appMbtFEtb4tlvEbs/tblm8AWajXw7PrlGK"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        976,
+        -16
+      ],
+      "id": "ed2e1a7e-dc5f-4d3c-9f2a-53a9ea76c5dd",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "XTuiUdY63u4Cux09",
+          "name": "Airtable Personal Access Token account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "adb12a4c-929e-4659-aa2b-798f46a8a5f1",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "4b110009-2608-4d28-a4ca-67956a5fce9d",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ec544d1d-78a6-43d8-a076-ae5523b30ff8",
+              "name": "orderID",
+              "value": "={{ $json.orderID }}",
+              "type": "number"
+            },
+            {
+              "id": "4c772fb3-f767-4621-94e7-aa28d56dab8c",
+              "name": "employeeName",
+              "value": "={{ $json.employeeName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        688,
+        -16
+      ],
+      "id": "0d360f86-0dee-4555-a4f2-e18c2fe699c7",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();   // get all booked orders\nlet totalBooked = items.length;   // count how many booked orders\nlet bookedSum = 0;   // initialize sum\n\nfor (let i = 0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;  // add up order prices\n}\n\n// return result in correct n8n format\nreturn [{\n  json: {\n    totalBooked,\n    bookedSum\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        896,
+        240
+      ],
+      "id": "dc97d96f-611a-4fa6-ad57-eae14645c374",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=This week we've {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{ $('HTTP Request').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1104,
+        240
+      ],
+      "id": "25be07dc-3c61-43e8-adbf-cebbc45cb10a",
+      "name": "Discord",
+      "webhookId": "980d733e-9635-4297-9e9f-62c85864b955",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "wvnlsGYflmHmG1SE",
+          "name": "Discord Webhook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        32,
+        0
+      ],
+      "id": "f8b00952-288a-4c2d-b7f3-e9cfde8de453",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "8f569562-2f52-4d90-b0bd-ab0cb72bf0f0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "29135df830909e313b7a71851cfaf3241c282055b3bcb889d9a0abffe028b15c"
+  },
+  "id": "0Ka8bkT2uvEkEFYY",
+  "tags": []
+}
