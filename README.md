@@ -42,3 +42,12 @@ cd n8n-workflows
 - 📄 [View Details](./Air-Table-Integration/README.md)
 ----
 
+### 📊 [Data-Operations](./Data_Retrival)  
+**Project Name:** Customer Data Messenger  
+- 📥 Retrieves customer records from the training datastore.  
+- ✍ Maps fields like ID, Name, Email, and Notes.  
+- 📤 Sends formatted messages to customers.  
+- 📄 [View Details](./Data_Retrival/README.md)
+----
+
+
