@@ -34,5 +34,11 @@ cd n8n-workflows
 - 📄 [View Details](./ChatBot/README.md)
 
 ----
-
+### 📋 [Air-Table-Integration](./Airtable_Example)  
+**Project Name:** Airtable Record Creator  
+- ▶️ Manually triggered workflow for quick testing.  
+- ✍ Sets example fields (`Name`, `User_Email`) before sending.  
+- 📥 Creates a new record in your chosen Airtable base.  
+- 📄 [View Details](./Airtable_Example/README.md)
+----
 
