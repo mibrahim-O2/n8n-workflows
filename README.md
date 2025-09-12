@@ -19,5 +19,8 @@ Each workflow lives in its own folder with a dedicated README and JSON file for 
 
 ### 1️⃣ Clone or Download
 ```bash
-git clone https://github.com/your-username/n8n-workflows.git
+ ### 1️⃣ Clone or Download
+```bash
+git clone https://github.com/mibrahim-O2/n8n-workflows.git
 cd n8n-workflows
+
