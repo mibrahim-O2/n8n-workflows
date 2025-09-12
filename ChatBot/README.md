@@ -1,4 +1,4 @@
-# 🤖 ChatBot01 – n8n Google Gemini Chatbot
+# 🤖 ChatBot – n8n Google Gemini Chatbot
 
 A lightweight **n8n** workflow for creating an AI-powered chatbot using **Google Gemini (PaLM)**.  
 It listens for chat messages, processes them with an AI Agent, and uses a memory buffer for context.
