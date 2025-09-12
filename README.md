@@ -39,6 +39,6 @@ cd n8n-workflows
 - ▶️ Manually triggered workflow for quick testing.  
 - ✍ Sets example fields (`Name`, `User_Email`) before sending.  
 - 📥 Creates a new record in your chosen Airtable base.  
-- 📄 [View Details](./Airtable_Example/README.md)
+- 📄 [View Details](./Air-Table-Integration/README.md)
 ----
 
