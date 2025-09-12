@@ -1,0 +1,149 @@
+{
+  "name": "Airtable_Example",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        -16
+      ],
+      "id": "c9e85517-5878-4b9c-97ec-41e5d2d9cc84",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0b8dee62-59ef-438b-ab29-8555056d7f65",
+              "name": "Name",
+              "value": "Muhammad Ibrahim",
+              "type": "string"
+            },
+            {
+              "id": "e7a0cd8e-389c-4c40-afdd-1be42e2039c6",
+              "name": "User_Email",
+              "value": "mibrahimkhalid306@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -128,
+        -16
+      ],
+      "id": "765110f3-a2ff-4432-b74a-96699e57ad99",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appIlTFZu5ZS1dZkN",
+          "mode": "list",
+          "cachedResultName": "N8n_Integration",
+          "cachedResultUrl": "https://airtable.com/appIlTFZu5ZS1dZkN"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl4M9rHzLVR5DMty",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appIlTFZu5ZS1dZkN/tbl4M9rHzLVR5DMty"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.Name }}",
+            "User_Email": "={{ $json.User_Email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "User_Email",
+              "displayName": "User_Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        80,
+        -16
+      ],
+      "id": "95001c87-9234-400a-b8b0-6cc58e95c6c2",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "m1FB396TsCYdGIiD",
+          "name": "Airtable Personal Access Token account 5"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "93c4bb05-e92e-4421-bde6-86ac26b4449d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "29135df830909e313b7a71851cfaf3241c282055b3bcb889d9a0abffe028b15c"
+  },
+  "id": "PxLBAFlEzMEYVNHH",
+  "tags": []
+}
