@@ -11,7 +11,7 @@ Each workflow lives in its own folder with a dedicated README and JSON file for 
 **Project Name:** Real World Case  
 - 📦 Automates order processing and team notifications.  
 - 🧮 Retrieves, filters, calculates totals, stores data, and sends summaries—no manual effort required.  
-- 📄 [View Details](./Order-Automation/README.md)  
+- 📄 [View Details](./Data-Operations/README.md)  
 
 ---
 
