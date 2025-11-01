@@ -58,4 +58,14 @@ cd n8n-workflows
 * 🕒 Runs automatically every Monday at 9 AM via **Schedule Trigger**.
 * ✍️ Generates structured content, converts it into an HTML newsletter, and saves a **Gmail draft** for review.
 * 📄 [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/News-Letter-Agent/README.md)
+----
+### 🤖 [Multi-Agent](./Multi-Agent)
 
+**Project Name:** AI Multi-Tool Assistant
+
+* 💬 Chat-triggered workflow that responds intelligently using **Google Gemini (PaLM)**.
+* 🧠 Includes short-term **memory** for contextual conversations.
+* 🗓️ Integrates with **Google Sheets** for data lookup and **Google Calendar** for event scheduling.
+* ⚡ Demonstrates a **multi-agent architecture** inside n8n for dynamic task handling.
+* 📄 [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/Multi-Agent/README.md)
+----
