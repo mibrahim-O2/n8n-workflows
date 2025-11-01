@@ -1,0 +1,197 @@
+{
+  "name": "Multi-Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -288,
+        0
+      ],
+      "id": "140d85f4-ea8d-4273-a660-7455898d2e9a",
+      "name": "When chat message received",
+      "webhookId": "8334fd01-eb50-499d-8200-2c504dbb686c"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a helpful assistant!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -16,
+        0
+      ],
+      "id": "957f9f9b-ef19-449d-b7cb-b2f48b85059d",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        160
+      ],
+      "id": "da730e9a-b566-4311-ad7b-7bfe73cec5ed",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "cY5fUSVTOXwyJ2VZ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        16,
+        176
+      ],
+      "id": "1c1ab313-35f3-4abb-be1a-65d926399ac3",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Create an event in Google Calendar",
+        "calendar": {
+          "__rl": true,
+          "value": "mibrahimkhalid306@gmail.com",
+          "mode": "list",
+          "cachedResultName": "mibrahimkhalid306@gmail.com"
+        },
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        368,
+        144
+      ],
+      "id": "713e1b56-06f6-4a6b-a5d1-70f1ca878796",
+      "name": "Event-Manager",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "XX4l0tXf0T18rtxK",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Get row(s) in sheet for patient diabetes",
+        "documentId": {
+          "__rl": true,
+          "value": "1zaLX0NAbyCctRppiRhrW0q8BRAPHEigtDDXsPK-6daA",
+          "mode": "list",
+          "cachedResultName": "Contacts_CSV_template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zaLX0NAbyCctRppiRhrW0q8BRAPHEigtDDXsPK-6daA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1012872217,
+          "mode": "list",
+          "cachedResultName": "Contacts_CSV_template.csv",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zaLX0NAbyCctRppiRhrW0q8BRAPHEigtDDXsPK-6daA/edit#gid=1012872217"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        192
+      ],
+      "id": "0e0bc258-f4b2-4120-82f7-fb319e4886f7",
+      "name": "Get-Contact-Data",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4DM5whH49TtW6jbj",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Event-Manager": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get-Contact-Data": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "50778f97-e064-414a-945f-5836cf809d93",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "35eee2f73c2c7003e10e5d1205eda8466ab2504d26ed6c8451bb6d585b205def"
+  },
+  "id": "uFVCTP9NpRMpLt8V",
+  "tags": []
+}
