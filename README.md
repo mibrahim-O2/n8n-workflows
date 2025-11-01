@@ -50,4 +50,12 @@ cd n8n-workflows
 - 📄 [View Details](./Data-Operations/README.md)
 ----
 
+### 📰 [News-Letter-Agent](./News-Letter-Agent)
+
+**Project Name:** Automated AI Newsletter Generator
+
+* 🧠 Uses **Google Gemini (PaLM)** and **Tavily API** to curate weekly business news.
+* 🕒 Runs automatically every Monday at 9 AM via **Schedule Trigger**.
+* ✍️ Generates structured content, converts it into an HTML newsletter, and saves a **Gmail draft** for review.
+* 📄 [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/News-Letter-Agent/README.md)
 
