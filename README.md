@@ -1,32 +1,32 @@
-# ⚙️ n8n Workflows Collection
+# n8n Workflows Collection
 
 This repository contains **automation workflows** built with [n8n](https://n8n.io), an open-source workflow automation platform.  
 Each workflow lives in its own folder with a dedicated README and JSON file for easy import into your own n8n instance.
 
 ---
 
-## 📂 Available Workflows
+## Available Workflows
 
 ### 🔸 [Order Automation](./Order-Automation)
 **Project Name:** Real World Case  
-- 📦 Automates order processing and team notifications.  
-- 🧮 Retrieves, filters, calculates totals, stores data, and sends summaries—no manual effort required.  
-- 📄 [View Details](Order-Automation/README.md)  
+- Automates order processing and team notifications.  
+- Retrieves, filters, calculates totals, stores data, and sends summaries—no manual effort required.  
+- [View Details](Order-Automation/README.md)  
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 1️⃣ Clone or Download
+### 1️ Clone or Download
 ```bash
  ```markdown
-### 1️⃣ Clone or Download
+### 1️ Clone or Download
 ```bash
 git clone https://github.com/mibrahim-O2/n8n-workflows.git
 cd n8n-workflows
 ```
 ----
-### 🤖 [ChatBot – Google Gemini Chatbot](./ChatBot01)
+###  [ChatBot – Google Gemini Chatbot](./ChatBot01)
 **Project Name:** AI Chatbot with Memory  
 - 🔗 Google Gemini (PaLM)–powered conversational bot.  
 - 🧠 Retains recent chat context using Simple Memory Buffer.  
