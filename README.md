@@ -15,7 +15,11 @@
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=2" width="100%"/>
 
  
+## Overview
 
+This repository contains **automation workflows** built with [n8n](https://n8n.io), an open-source workflow automation platform. Each workflow lives in its own folder with a dedicated README and JSON file for easy import into your own n8n instance.
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=2" width="100%"/>
  
 ---
 
