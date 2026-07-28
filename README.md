@@ -104,19 +104,29 @@ cd n8n-workflows
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
 
+### Data Operations
+
+**Project Name:** Customer Data Messenger
+
+<p>
+<img src="https://img.shields.io/badge/Data_Retrieval-1a1a1a?style=flat-square&labelColor=1a1a1a&color=eab308">
+<img src="https://img.shields.io/badge/Field_Mapping-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+</p>
+
+- Retrieves customer records from the training datastore.
+- Maps fields like ID, Name, Email, and Notes.
+- Sends formatted messages to customers.
+- [View Details](./Data-Operations/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=1" width="100%"/>
+
  
  
   
  
 
  
-----
-### 📋 [Air-Table-Integration](./Airtable_Example)  
-**Project Name:** Airtable Record Creator  
-- ▶️ Manually triggered workflow for quick testing.  
-- ✍ Sets example fields (`Name`, `User_Email`) before sending.  
-- 📥 Creates a new record in your chosen Airtable base.  
-- 📄 [View Details](./Air-Table-Integration/README.md)
+ 
 ----
 
 ### 📊 [Data-Operations](./Data_Retrival)  
