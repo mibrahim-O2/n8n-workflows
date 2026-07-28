@@ -88,6 +88,22 @@ cd n8n-workflows
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=1" width="100%"/>
 
  
+ ### Airtable Integration
+
+**Project Name:** Airtable Record Creator
+
+<p>
+<img src="https://img.shields.io/badge/Airtable-1a1a1a?style=flat-square&logo=airtable&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Manual_Trigger-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+</p>
+
+- Manually triggered workflow for quick testing.
+- Sets example fields (`Name`, `User_Email`) before sending.
+- Creates a new record in your chosen Airtable base.
+- [View Details](./Air-Table-Integration/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
+
  
  
   
