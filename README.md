@@ -139,6 +139,25 @@ cd n8n-workflows
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
 
  
+### Multi-Agent Assistant
+
+**Project Name:** AI Multi-Tool Assistant
+
+<p>
+<img src="https://img.shields.io/badge/Google_Gemini-1a1a1a?style=flat-square&logo=googlegemini&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Google_Sheets-1a1a1a?style=flat-square&logo=googlesheets&logoColor=2ea44f&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Google_Calendar-1a1a1a?style=flat-square&logo=googlecalendar&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Multi--Agent-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+</p>
+
+- Chat-triggered workflow that responds intelligently using **Google Gemini (PaLM)**.
+- Includes short-term **memory** for contextual conversations.
+- Integrates with **Google Sheets** for data lookup and **Google Calendar** for event scheduling.
+- Demonstrates a **multi-agent architecture** inside n8n for dynamic task handling.
+- [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/Multi-Agent/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=2" width="100%"/>
+
  
  
   
@@ -148,20 +167,6 @@ cd n8n-workflows
  
 ----
  
-----
-
- 
-### 🤖 [Multi-Agent](./Multi-Agent)
-
-**Project Name:** AI Multi-Tool Assistant
-
-* 💬 Chat-triggered workflow that responds intelligently using **Google Gemini (PaLM)**.
-* 🧠 Includes short-term **memory** for contextual conversations.
-* 🗓️ Integrates with **Google Sheets** for data lookup and **Google Calendar** for event scheduling.
-* ⚡ Demonstrates a **multi-agent architecture** inside n8n for dynamic task handling.
-* 📄 [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/Multi-Agent/README.md)
-----
-
 
 
 ----
