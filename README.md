@@ -70,21 +70,30 @@ cd n8n-workflows
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
 
+### ChatBot — Google Gemini Chatbot
+
+**Project Name:** AI Chatbot with Memory
+
+<p>
+<img src="https://img.shields.io/badge/Google_Gemini-1a1a1a?style=flat-square&logo=googlegemini&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Memory_Buffer-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+<img src="https://img.shields.io/badge/AI_Agent-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+</p>
+
+- Google Gemini (PaLM)–powered conversational bot.
+- Retains recent chat context using Simple Memory Buffer.
+- AI Agent processes and responds intelligently.
+- [View Details](./ChatBot/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=1" width="100%"/>
+
  
  
  
   
  
 
-
-----
-###  [ChatBot – Google Gemini Chatbot](./ChatBot01)
-**Project Name:** AI Chatbot with Memory  
-- 🔗 Google Gemini (PaLM)–powered conversational bot.  
-- 🧠 Retains recent chat context using Simple Memory Buffer.  
-- 🤖 AI Agent processes and responds intelligently.  
-- 📄 [View Details](./ChatBot/README.md)
-
+ 
 ----
 ### 📋 [Air-Table-Integration](./Airtable_Example)  
 **Project Name:** Airtable Record Creator  
