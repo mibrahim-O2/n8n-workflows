@@ -40,20 +40,24 @@ This repository contains **automation workflows** built with [n8n](https://n8n.i
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=2" width="100%"/>
 
 </div>
- 
- 
----
 
-##  Getting Started
 
-### 1️ Clone or Download
-```bash
- ```markdown
-### 1️ Clone or Download
+## Getting Started
+
+**Clone or Download**
+
 ```bash
 git clone https://github.com/mibrahim-O2/n8n-workflows.git
 cd n8n-workflows
 ```
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=2" width="100%"/>
+
+ 
+  
+ 
+
+
 ----
 ###  [ChatBot – Google Gemini Chatbot](./ChatBot01)
 **Project Name:** AI Chatbot with Memory  
