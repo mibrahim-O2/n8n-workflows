@@ -171,30 +171,6 @@ You are free to use, modify, and distribute these workflow examples for both per
 > - Users are responsible for ensuring compliance with **third-party API terms** (e.g., Google, Tavily, Airtable).
 > - OpenAI, Google Gemini, and other APIs used in these workflows may have their own usage restrictions and rate limits.
 
-   
- 
-  
- 
-
- 
- 
-----
- 
-
-
-----
-
-## 🧾 License
-
-This repository is licensed under the **MIT License**.
-
-You are free to use, modify, and distribute these workflow examples for both personal and commercial purposes, provided that you include the original copyright notice and this permission notice in all copies or substantial portions of the software.
-
-> ⚠️ **Disclaimer:**
->
-> * All workflows are provided **“as is”**, without warranty of any kind.
-> * These examples are for **educational and internal automation** purposes.
-> * Users are responsible for ensuring compliance with **third-party API terms** (e.g., Google, Tavily, Airtable).
-> * OpenAI, Google Gemini, and other APIs used in these workflows may have their own usage restrictions and rate limits.
-----
-
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=100&section=footer"/>
+</div>     
