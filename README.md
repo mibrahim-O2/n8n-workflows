@@ -1,18 +1,22 @@
-# n8n Workflows Collection
+<div align="center">
 
-This repository contains **automation workflows** built with [n8n](https://n8n.io), an open-source workflow automation platform.  
-Each workflow lives in its own folder with a dedicated README and JSON file for easy import into your own n8n instance.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=160&section=header&text=n8n%20Workflows%20Collection&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Automation%20Workflows%20Built%20With%20n8n&descAlignY=62&descSize=15&descColor=eab308"/>
 
----
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&duration=2800&pause=1000&color=2ea44f&center=true&vCenter=true&width=650&lines=Order+Automation+%C2%B7+AI+Chatbots+%C2%B7+Data+Ops;Newsletter+Generation+%C2%B7+Multi-Agent+Assistant" alt="Typing SVG"/>
 
-## Available Workflows
+<br/>
 
-### 🔸 [Order Automation](./Order-Automation)
-**Project Name:** Real World Case  
-- Automates order processing and team notifications.  
-- Retrieves, filters, calculates totals, stores data, and sends summaries—no manual effort required.  
-- [View Details](Order-Automation/README.md)  
+<img src="https://img.shields.io/badge/n8n-1a1a1a?style=for-the-badge&logo=n8n&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Workflows-6-eab308?style=for-the-badge&labelColor=1a1a1a">
 
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=2" width="100%"/>
+
+ 
+
+ 
 ---
 
 ##  Getting Started
