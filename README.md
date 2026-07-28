@@ -53,6 +53,25 @@ cd n8n-workflows
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=2" width="100%"/>
 
+## Available Workflows
+
+### Order Automation
+
+**Project Name:** Real World Case
+
+<p>
+<img src="https://img.shields.io/badge/n8n-1a1a1a?style=flat-square&logo=n8n&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Automation-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+</p>
+
+- Automates order processing and team notifications.
+- Retrieves, filters, calculates totals, stores data, and sends summaries — no manual effort required.
+- [View Details](Order-Automation/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
+
+ 
+ 
  
   
  
