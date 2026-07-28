@@ -120,6 +120,25 @@ cd n8n-workflows
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:eab308,100:1a1a1a&height=1" width="100%"/>
 
+### Newsletter Agent
+
+**Project Name:** Automated AI Newsletter Generator
+
+<p>
+<img src="https://img.shields.io/badge/Google_Gemini-1a1a1a?style=flat-square&logo=googlegemini&logoColor=eab308&labelColor=1a1a1a">
+<img src="https://img.shields.io/badge/Tavily_API-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+<img src="https://img.shields.io/badge/Schedule_Trigger-1a1a1a?style=flat-square&labelColor=1a1a1a&color=2ea44f">
+<img src="https://img.shields.io/badge/Gmail-1a1a1a?style=flat-square&logo=gmail&logoColor=eab308&labelColor=1a1a1a">
+</p>
+
+- Uses **Google Gemini (PaLM)** and **Tavily API** to curate weekly business news.
+- Runs automatically every Monday at 9 AM via **Schedule Trigger**.
+- Generates structured content, converts it into an HTML newsletter, and saves a **Gmail draft** for review.
+- [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/News-Letter-Agent/README.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,50:2ea44f,100:1a1a1a&height=1" width="100%"/>
+
+ 
  
  
   
@@ -128,24 +147,10 @@ cd n8n-workflows
  
  
 ----
-
-### 📊 [Data-Operations](./Data_Retrival)  
-**Project Name:** Customer Data Messenger  
-- 📥 Retrieves customer records from the training datastore.  
-- ✍ Maps fields like ID, Name, Email, and Notes.  
-- 📤 Sends formatted messages to customers.  
-- 📄 [View Details](./Data-Operations/README.md)
+ 
 ----
 
-### 📰 [News-Letter-Agent](./News-Letter-Agent)
-
-**Project Name:** Automated AI Newsletter Generator
-
-* 🧠 Uses **Google Gemini (PaLM)** and **Tavily API** to curate weekly business news.
-* 🕒 Runs automatically every Monday at 9 AM via **Schedule Trigger**.
-* ✍️ Generates structured content, converts it into an HTML newsletter, and saves a **Gmail draft** for review.
-* 📄 [View Details](https://github.com/mibrahim-O2/n8n-workflows/blob/main/News-Letter-Agent/README.md)
-----
+ 
 ### 🤖 [Multi-Agent](./Multi-Agent)
 
 **Project Name:** AI Multi-Tool Assistant
